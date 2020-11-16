@@ -46,7 +46,7 @@ jobs:
         path: vendor
         key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
     - name: Setup env file
-      run: cp .env.example .env
+      run: cp .env.ci .env
     - name: test ls
       run: ls -lao
     - name: Composer install
